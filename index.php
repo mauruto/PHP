@@ -19,8 +19,20 @@ require_once ("config.php");
 
 //carrega um usuário usando o login e a senha
 
+//$usuario = new Usuario();
+//$usuario->login("root","kkkkk");
+//echo $usuario;
+
+//inserir usuario com procedure
+//$aluno = new Usuario("aluno","aluno123");
+//$aluno->insert();
+//echo $aluno;
+
 $usuario = new Usuario();
-$usuario->login("root","kkkkk");
+
+$usuario->loadbyId(8);
+
+$usuario->update("professor","!@#$%¨&*");
 
 echo $usuario;
 
